@@ -1,0 +1,199 @@
+@charset "UTF-8";
+body{
+    background-color: #dddddd;
+    color: rgba(0, 0, 0, 1);
+}
+div#interface{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 1150px;
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;/*  ^ > v <  espaçamento externo do container*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    padding: 10px 10px 10px 10px;/*espaçamento interno do container */
+}
+p{
+    text-align: justify;
+    text-indent: 50px;
+}
+header#cabecalho img#icone{/*oculos pq*/
+    position: absolute;/*flutuar*/
+    left: 1000px;/*oculos p/ direita*/
+    top: 50px;/* para cima*/
+}
+header#cabecalho{
+    border-bottom: 1px #606060 solid;
+    height: 155px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px;
+}
+header#cabecalho h1{
+    font-family: Arial,  sans-serif;
+    font-size: 50px;
+    color: #606060;
+    text-shadow: 1px 1px 1px red;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+header#cabecalho h2{
+    font-family: Arial, sans-serif;
+    color: #888888 ;
+    padding: 0px;
+}
+/*Formatação de imagem com legendas */
+figure.foto-legenda{ /*  . = class/  tag . parâmetro */
+    position: relative;/*corrigir a posição da legenda(figcaption filho de figure)  @*/
+    border: 8px solid rgb(255, 253, 253);/*Foto Maior que a borda*/
+    box-shadow: 1px 1px 4px black; /* sombra 3D/ horizontal, vertical, espalhamento, cor  */
+}
+figure.foto-legenda img{/*Ajustar img dentro  a borda*/
+    width: 100%;/*Largura*/
+    height: 100%;/*Altura*/
+}
+figure.foto-legenda figcaption{/*Legenda*/
+    opacity: 0;/*legenda transparente    #*/
+    position: absolute;/*posição absoluta dentro do container no caso a borda  @*/
+    top: 0px;/*fica encostada no topo*/
+    background-color: rgba(0, 0, 0, .4);/*cor do container*/
+    color: white;/*cor da letra*/
+    width: 100%;/*container cobrir a foto*/
+    height: 100%;/*container cobrir a foto*/
+    padding: 10 ;/*espaço na legenda*/
+    box-sizing: border-box;/*criar box dentro da borda*/
+    transition: 1s;/*Tempo de transição #*/
+}
+figure.foto-legenda:hover figcaption{/*Hover para evento quando passar o mouse  #*/
+    opacity: 1;/*Reaparecer a legenda e mudar o back #*/
+
+}
+/*FORMATAÇÃO DO MENU*/
+nav#menu{/**FAZER BLOCO FLUTUAR*/
+    display: block;/*transformar em um bloco */
+   
+}
+nav#menu ul { /*LISTA*/
+    list-style: none;/*TIRAR MARCADOR DA LISTA*/
+    text-transform: uppercase;/*Maiscula texto*/
+    position: absolute;/*para ficar por cima dos demais da pagina*/
+    top: -10px;
+    left: 570px;
+}
+nav#menu li{/*Itens da lista*/
+     display: inline-block;/*cada item em um bloco*/
+     background-color: rgb(199, 204, 209);
+     padding: 10px;/*Espaço entre os blocos(itens da lista)*/
+     margin:2px ;/*posição central externa entre os bloco*/
+     transition: background-color 2s;/*transição da cor da caixa   $*/
+}
+nav#menu li:hover{ /*Evento ao passar o mouse                      $*/
+    background-color: rgb(83, 118, 153);/*                       $*/
+}
+nav#menu h1{
+ display: none; /*Sumir o h1 ser vista apenas no html*/  
+}
+nav#menu a { /* a=link*/
+    color: #000000;
+    text-decoration: none;/*tirar sublinhado do a=link*/
+}
+nav#menu a:hover{/*passar miuse under line */
+    color: #ffffff;
+    text-decoration:underline ;
+}
+section#corpo{
+    display: block;
+    width: 600px;
+    float: left;
+    border-right: 1px solid #606060;/*divisão vertical*/
+    padding-right: 20px;/*espaço da divisão vertical e texto*/
+    
+}
+section#corpo a{
+    text-decoration: none;/*tirar sublinhado do a=link*/
+    color: green;/*cor do link*/
+}
+article#noticia-principal{
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd3a;
+    padding: 5px 5px 5px 10px;/*letra dentro do bloco*/
+    margin: 10px 0px 10px 0px;/*bloco*/
+    box-shadow: #dddddd;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    
+}
+article#noticia-principal h2{
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd4b;
+    padding: 5px 0px 5px 10px;/*letra dentro do bloco*/
+    margin: 10px ;/*bloco*/
+    
+}
+
+header#cabecalho-artigo h1{/*por rony*/
+     font-family: fantasy ;
+     font-size: 20pt;
+     color: rgb(255, 17, 0);
+}
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    margin: 0px;
+}
+header#cabecalho-artigo h3{
+    font-size: 10pt;
+    color: rgba(0, 0, 255, 0.719);
+}
+.direita{
+    text-align: right;
+    color: blueviolet;
+}
+table#tabela{
+      border: 1px solid;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, .5); 
+      padding: 1px;
+}
+table#tabela td {
+    border: 1px solid;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    padding: 10px; 
+    text-align: center;    
+}
+
+aside#lateral{
+    display: block;
+    width: 500px;
+    float: right;
+    background-color: #6060603b;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    padding: 5px 5px 5px 10px;/*letra dentro do bloco*/
+}
+aside#lateral h1{
+    font-family: cursive;
+    font-size: 20pt;
+    color: #ca0e0e;
+    text-align: center;
+}
+aside#lateral h2{
+    background-color: #1ada1ad0;
+    font-size: 15pt;
+    color: #1080db;
+    padding: 0px;
+    margin: 0px 110px 0px 110px;
+    text-align: center;
+}
+
+footer#rodape{
+    clear: both;/*Lipar conf dos 2 lados*/
+    border-top: 1px solid #606060;/*divisoria topo*/
+}
+footer#rodape p {
+    text-align: center;
+    
+}
+footer#rodape a {
+    text-decoration: none;/*tirar sublinhado do a=link*/
+    color: green;/*cor do link*/
+}
+footer#rodape  a:hover{/*passar miuse under line */
+    color: blue;
+    text-decoration:underline ;
+}
